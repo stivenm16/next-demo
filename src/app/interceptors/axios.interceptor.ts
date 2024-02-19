@@ -1,11 +1,18 @@
 import axios, { InternalAxiosRequestConfig } from 'axios'
-import { getValidationError } from '../utils/get-validation-error'
-const updateHeader = (request: InternalAxiosRequestConfig<any>) => {
+import getToken from '../services/getToken.service'
+
+const updateHeader = async (request: InternalAxiosRequestConfig<any>) => {
   request.headers['Content-Type'] = 'application/json'
+
+  const token = await getToken({
+    username: 'admin',
+    password: 'admin',
+  })
+  request.headers['Authorization'] = `Bearer ${token}`
   return request
 }
 const axiosInstance = axios.create({
-  baseURL: 'https://rickandmortyapi.com/api',
+  baseURL: 'http://localhost:5150/sammapi',
 })
 
 axiosInstance.interceptors.request.use((request) => {
@@ -14,12 +21,9 @@ axiosInstance.interceptors.request.use((request) => {
 
 axiosInstance.interceptors.response.use(
   (response) => {
-    console.log('response', response)
-
     return response
   },
   (error) => {
-    console.log(getValidationError(error.code))
     return Promise.reject(error)
   },
 )
