@@ -51,7 +51,7 @@ const LoginForm = () => {
     }
   }
   return (
-    <div className="bg-indigo-800 p-8 rounded-xl shadow-xl h-fit w-full mx-4 md:w-1/4   relative">
+    <div className="bg-container-light dark:bg-container-dark p-8 rounded-xl shadow-xl h-fit w-full mx-4 md:w-1/4 relative">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 z-10">
         <div className="mb-4">
           <label htmlFor="email" className="block text-white font-bold mb-1">
@@ -60,7 +60,9 @@ const LoginForm = () => {
           <input
             type="email"
             id="email"
-            className={'w-full px-4 py-2 rounded border text-indigo-950 '}
+            className={
+              'w-full px-4 py-2 rounded border text-indigo-950 bg-white '
+            }
             {...register('email', {
               required: {
                 value: true,
@@ -86,7 +88,9 @@ const LoginForm = () => {
                 message: 'Password is required',
               },
             })}
-            className={'w-full px-4 py-2 rounded border text-indigo-950'}
+            className={
+              'w-full px-4 py-2 rounded border text-indigo-950 bg-white'
+            }
           />
           <p className="text-white text-xs font-bold mt-1">
             {errors.password?.message}
@@ -110,7 +114,9 @@ const LoginForm = () => {
                   message: 'confirm Password is required',
                 },
               })}
-              className={'w-full px-4 py-2 rounded border text-indigo-950'}
+              className={
+                'w-full px-4 py-2 rounded border text-indigo-950 bg-white'
+              }
             />
             <p className="text-white text-xs font-bold mt-1">
               {errors.confirmPassword?.message}
@@ -124,7 +130,7 @@ const LoginForm = () => {
         <p className="text-white text-center pt-auto">
           {!isRegister ? 'Already have an account?' : "Don't have an account?"}
           <span
-            className="text-indigo-300 cursor-pointer ml-2"
+            className="text-green-300 cursor-pointer ml-2"
             onClick={() => setIsRegister(!isRegister)}
           >
             Sign up
