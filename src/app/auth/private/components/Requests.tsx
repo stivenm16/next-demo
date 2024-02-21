@@ -3,7 +3,7 @@ import { Spinner } from '@/app/components'
 import { Notificacion } from '@/app/models'
 import { getAdminRequests } from '@/app/services'
 import { useEffect, useState } from 'react'
-import Request from './Request'
+import {Request} from '.'
 
 export const Requests = () => {
   const [requests, setRequests] = useState<Notificacion[]>()

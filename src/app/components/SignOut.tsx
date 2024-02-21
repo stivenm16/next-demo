@@ -3,7 +3,7 @@ import { signOut } from 'next-auth/react'
 import Link from 'next/link'
 import { Button } from '.'
 
-const SignOut = () => {
+export const SignOut = () => {
   return (
     <Link href="/">
       <Button
@@ -14,5 +14,3 @@ const SignOut = () => {
     </Link>
   )
 }
-
-export default SignOut

@@ -8,7 +8,7 @@ interface Props {
   handleRequest: (id: number) => void
 }
 
-const Request = ({ req, handleRequest }: Props) => {
+export const Request = ({ req, handleRequest }: Props) => {
   const [note, setNote] = useState('')
 
   const handleNoteChange = (text: any) => {
@@ -51,5 +51,3 @@ const Request = ({ req, handleRequest }: Props) => {
     </div>
   )
 }
-
-export default Request

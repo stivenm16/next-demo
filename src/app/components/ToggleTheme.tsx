@@ -1,7 +1,7 @@
 import { Button } from '.'
 import useCustomTheme from '../hooks/useCustomTheme'
 
-const ToggleTheme = () => {
+export const ToggleTheme = () => {
   const { toggleTheme } = useCustomTheme()
   return (
     <>
@@ -11,5 +11,3 @@ const ToggleTheme = () => {
     </>
   )
 }
-
-export default ToggleTheme

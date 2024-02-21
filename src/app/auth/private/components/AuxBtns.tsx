@@ -1,8 +1,5 @@
 'use client'
-
-import SignOut from '@/app/components/SignOut'
-import ToggleTheme from '@/app/components/ToggleTheme'
-import React from 'react'
+import { SignOut, ToggleTheme } from '@/app/components'
 
 export const AuxBtns = () => {
   return (

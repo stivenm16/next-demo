@@ -8,9 +8,7 @@ import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { forwardRef } from 'react'
 import * as yup from 'yup'
-import { Button, InputField } from '..'
-import ErrorField from './components/ErrorField'
-
+import { Button, ErrorField, InputField } from '..'
 interface IFormInput {
   email: string
   password: string

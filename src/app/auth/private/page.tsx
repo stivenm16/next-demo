@@ -1,6 +1,4 @@
-import { BackgroundImage } from './components'
-import { AuxBtns } from './components/AuxBtns'
-import { Requests } from './components/Requests'
+import { AuxBtns, BackgroundImage, Requests } from './components'
 
 const admin = () => {
   return (
