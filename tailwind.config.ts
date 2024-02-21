@@ -15,16 +15,16 @@ const config: Config = {
       },
       colors: {
         background: {
-          dark: '#1f789c',
-          light: '#4dc0b5',
+          dark: '#184d66',
+          light: '#c2ebff',
         },
         btn: {
           dark: '#1c4f68',
-          light: '#265951',
+          light: '#204a5c',
         },
         container: {
-          dark: '#3a84a0',
-          light: '#2e9e8f',
+          dark: '#7bbcd3',
+          light: '#47788d',
         },
       },
     },

@@ -15,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light" style={{ colorScheme: 'light' }}>
-      <body
-        className={`h-screen bg-background-light dark:bg-background-dark transitiona ease-in-out   flex justify-center items-center`}
-      >
+      <body className={`h-screen bg-background-light dark:bg-background-dark `}>
         <Provider>{children}</Provider>
       </body>
     </html>

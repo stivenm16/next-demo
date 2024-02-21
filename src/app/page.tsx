@@ -1,30 +1,32 @@
 'use client'
-import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
-import { Button, LoginForm } from './components'
+import { useState } from 'react'
+import { DynamicForm, LoginForm } from './components'
+import ToggleTheme from './components/ToggleTheme'
 import getUser from './services/axios'
 
 const handlePress = async () => {
   const response = await getUser()
 }
 export default function Home() {
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
+  const [isRegister, setIsRegister] = useState(true)
 
   return (
-    <div className="flex  flex-col w-full items-center">
-      <LoginForm />
+    <div className="flex  flex-col w-full justify-center items-center pt-48">
+      <div className="bg-container-light dark:bg-container-dark p-8 rounded-2xl shadow-2xl  ">
+        {isRegister ? <LoginForm /> : <DynamicForm />}
+
+        <span className="text-center mt-8 dark:text-background-dark">
+          {!isRegister ? '¿Ya tienes una cuenta?' : '¿No tienes aun cuenta?'}
+          <span
+            className="cursor-pointer text-container-dark dark:text-background-light dark:hover:text-btn-dark placeholder-opacity-60 font-sm hover:text-background-light transition ease-in-out duration-300"
+            onClick={() => setIsRegister(!isRegister)}
+          >
+            {isRegister ? ' Registrarse' : ' Ingresar'}
+          </span>
+        </span>
+      </div>
       <div className=" flex mt-5 gap-5">
-        <Button onClick={() => setTheme('light')}>Light Mode</Button>
-        <Button onClick={() => setTheme('dark')}>Dark Mode</Button>
+        <ToggleTheme />
       </div>
     </div>
   )
