@@ -1,6 +1,8 @@
-import { AuxBtns, BackgroundImage, Requests } from './components'
+'use client'
+import { AuxBtns } from '@/app/components'
+import { BackgroundImage, Requests } from './components'
 
-const admin = () => {
+const Page = () => {
   return (
     <div>
       <BackgroundImage />
@@ -9,10 +11,10 @@ const admin = () => {
           Solicitudes
         </h3>
         <Requests />
+        <AuxBtns />
       </div>
-      <AuxBtns />
     </div>
   )
 }
 
-export default admin
+export default Page

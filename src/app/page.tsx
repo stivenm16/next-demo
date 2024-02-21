@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
-import { DynamicForm, LoginForm } from './components'
-import ToggleTheme from './components/ToggleTheme'
+import { ToggleTheme } from './components'
+import { DynamicForm, LoginForm } from './components/forms'
 import getUser from './services/axios'
 
 const handlePress = async () => {

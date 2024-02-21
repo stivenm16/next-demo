@@ -5,8 +5,8 @@ import { createSchema, removeEmptyFields } from '@/app/utils'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { forwardRef, useEffect, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { Button, InputField, Spinner, ErrorField } from '..'
-
+import { Button, Spinner } from '..'
+import { ErrorField, InputField } from '.'
 
 interface FormStructure {
   email: string

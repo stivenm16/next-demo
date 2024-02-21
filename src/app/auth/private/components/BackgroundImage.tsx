@@ -12,7 +12,7 @@ export const BackgroundImage = () => {
         priority
         alt="logo"
         src={theme === 'dark' ? logoLight : logo}
-        className={`z-0 absolute left-1/3 top-48 `}
+        className={`z-0 absolute left-1/4 top-28 opacity-20 `}
         width="0"
         height="0"
         sizes="100vw"
@@ -20,7 +20,6 @@ export const BackgroundImage = () => {
         blurDataURL={'../../assets/svgs/logo-samm-ia-1802-b.png'}
         style={{ width: '50%', height: 'auto' }}
       />
-      <div className="absolute inset-0 z-0 h-screen"></div>
     </div>
   )
 }

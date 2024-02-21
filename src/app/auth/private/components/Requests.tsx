@@ -3,7 +3,7 @@ import { Spinner } from '@/app/components'
 import { Notificacion } from '@/app/models'
 import { getAdminRequests } from '@/app/services'
 import { useEffect, useState } from 'react'
-import {Request} from '.'
+import { Request } from '.'
 
 export const Requests = () => {
   const [requests, setRequests] = useState<Notificacion[]>()
@@ -27,7 +27,7 @@ export const Requests = () => {
   return (
     <>
       {!!requests ? (
-        <div className="w-full flex h-48 flex-wrap p-5 gap-5 m-5">
+        <div className="w-full flex h-48 flex-wrap p-10 gap-5 ">
           {requests.map((req) => (
             <Request req={req} key={req.id} handleRequest={handleRequest} />
           ))}
