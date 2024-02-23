@@ -1,7 +1,7 @@
 'use client'
 import { BackgroundImage } from '@/app/auth/private/components'
 import { useState } from 'react'
-import { AuxBtns } from '..'
+import { AuxBtns, Button } from '..'
 
 const defaultForm = [
   {
@@ -36,14 +36,22 @@ export const FormGenerator = () => {
     }
   }
 
+  const sendForm = () => {
+    const form = formFields.filter((formField: any) => formField.key !== '')
+    console.log('Form:', form)
+  }
+
   return (
     <div>
       <BackgroundImage />
       <div className="flex justify-center items-center flex-col relative">
-        <div className=" justify-center w-auto mx-auto mt-56 mb-5 p-5 bg-container-light dark:bg-container-dark rounded-md shadow-xl ">
+        <div className=" justify-center w-[17rem] mx-auto mt-56 mb-5 p-5 bg-container-light dark:bg-container-dark rounded-md shadow-xl ">
+          <h4 className="text-background-light dark:text-btn-dark text-center text-xl font-extrabold py-1 text-wrap">
+            Generador de formularios
+          </h4>
           {formFields.map((formField: any, index: number) => (
             <div key={index} className="flex flex-col gap-2 w-full mb-2">
-              <span className="dark:text-background-dark dark:opacity-70">
+              <span className="dark:text-background-dark dark:opacity-70 overflow-hidden ">
                 {formField.key || 'Key'}
               </span>
               <input
@@ -57,6 +65,11 @@ export const FormGenerator = () => {
               />
             </div>
           ))}
+          <Button
+            label="Guardar formulario"
+            customStyles="mx-auto mt-5"
+            onClick={sendForm}
+          />
         </div>
         <AuxBtns path="/auth/private" />
       </div>

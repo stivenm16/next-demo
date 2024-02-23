@@ -4,7 +4,10 @@ import Image from 'next/image'
 import logoLight from '../../../assets/svgs/logo-samm-ia-1802-a.png'
 import logo from '../../../assets/svgs/logo-samm-ia-1802-b.png'
 
-export const BackgroundImage = () => {
+interface Props {
+  customStyle?: string
+}
+export const BackgroundImage = ({ customStyle }: Props) => {
   const { theme } = useTheme()
   return (
     <div className="relative">
@@ -12,7 +15,7 @@ export const BackgroundImage = () => {
         priority
         alt="logo"
         src={theme === 'dark' ? logoLight : logo}
-        className={`z-0 absolute left-1/4 top-28 opacity-20 `}
+        className={`z-0 absolute left-1/4 top-28 opacity-20 ${customStyle}`}
         width="0"
         height="0"
         sizes="100vw"
