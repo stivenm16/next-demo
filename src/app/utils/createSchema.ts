@@ -1,4 +1,4 @@
-import { DynamicFormFieldProps } from '../models'
+import { DynamicFormFieldProps } from 'samm-frontend-resources-test/models'
 import * as yup from 'yup'
 
 export const createSchema = (fields: any) => {

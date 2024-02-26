@@ -2,10 +2,9 @@
 import { useState } from 'react'
 import { ToggleTheme } from './components'
 import { DynamicForm, LoginForm } from './components/forms'
-import getUser from './services/axios'
 
 const handlePress = async () => {
-  const response = await getUser()
+  // const response = await getUser()
 }
 export default function Home() {
   const [isRegister, setIsRegister] = useState(true)

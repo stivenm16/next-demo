@@ -1,6 +1,5 @@
 export * from './colorPallete'
 export * from './createSchema'
-export * from './fakeResponses'
 export * from './funcs'
 export * from './get-validation-error'
 export * from './local-storage-manager'

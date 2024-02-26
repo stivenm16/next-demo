@@ -1,9 +1,10 @@
 'use client'
 import { Spinner } from '@/app/components'
-import { Notificacion } from '@/app/models'
-import { getAdminRequests } from '@/app/services'
+
 import { useEffect, useState } from 'react'
+import { getAdminRequests } from 'samm-frontend-resources-test'
 import { Request } from '.'
+import { Notificacion } from 'samm-frontend-resources-test/models'
 
 export const Requests = () => {
   const [requests, setRequests] = useState<Notificacion[]>()

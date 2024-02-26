@@ -1,12 +1,12 @@
 'use client'
-import { DynamicFormFieldProps } from '@/app/models'
-import { createRequest, getFormFields } from '@/app/services'
 import { createSchema, removeEmptyFields } from '@/app/utils'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { forwardRef, useEffect, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { Button, Spinner } from '..'
+import { createRequest, getFormFields } from 'samm-frontend-resources-test'
 import { ErrorField, InputField } from '.'
+import { Button, Spinner } from '..'
+import { DynamicFormFieldProps } from 'samm-frontend-resources-test/models'
 
 interface FormStructure {
   email: string

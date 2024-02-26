@@ -1,4 +1,4 @@
-import { TypeWithKey } from '../models'
+import { TypeWithKey } from 'samm-frontend-resources-test/models'
 
 export const getValidationError = (errorCode: any) => {
   const codeMatcher: TypeWithKey<string> = {

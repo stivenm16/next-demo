@@ -3,13 +3,14 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import { Controller, useForm } from 'react-hook-form'
 
-import getToken from '@/app/services/getToken.service'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { forwardRef } from 'react'
 import * as yup from 'yup'
 import { Button } from '..'
 import { ErrorField, InputField } from '.'
+import getToken from 'samm-frontend-resources-test/services/get-token.service'
+
 interface IFormInput {
   email: string
   password: string

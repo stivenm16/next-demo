@@ -1,7 +1,8 @@
 'use client'
 import { Button } from '@/app/components'
-import { Notificacion } from '@/app/models'
+
 import { useState } from 'react'
+import { Notificacion } from 'samm-frontend-resources-test/models'
 
 interface Props {
   req: Notificacion
