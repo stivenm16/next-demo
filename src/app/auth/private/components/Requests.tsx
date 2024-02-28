@@ -2,9 +2,10 @@
 import { Spinner } from '@/app/components'
 
 import { useEffect, useState } from 'react'
-import { getAdminRequests } from 'samm-frontend-resources-test'
-import { Request } from '.'
+
 import { Notificacion } from 'samm-frontend-resources-test/models'
+import { getAdminRequests } from 'samm-frontend-resources-test/services'
+import { Request } from '.'
 
 export const Requests = () => {
   const [requests, setRequests] = useState<Notificacion[]>()

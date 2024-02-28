@@ -6,10 +6,10 @@ import { Controller, useForm } from 'react-hook-form'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { forwardRef } from 'react'
+import { getToken } from 'samm-frontend-resources-test/services'
 import * as yup from 'yup'
-import { Button } from '..'
 import { ErrorField, InputField } from '.'
-import getToken from 'samm-frontend-resources-test/services/get-token.service'
+import { Button } from '..'
 
 interface IFormInput {
   email: string
